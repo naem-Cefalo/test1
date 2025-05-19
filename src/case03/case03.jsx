@@ -13,9 +13,9 @@ function Case03() {
 
   const toggleVisibility = () => {
     const arr = ['apple', 'orange', 'mango'];
-    setProduct(arr);
+    // setProduct(arr);
 
-    // setProduct((prev) => (prev.length ? [] : arr));
+    setProduct((prev) => (prev.length ? [] : arr));
   };
   return (
     <div style={{ padding: '2rem' }}>
@@ -25,7 +25,7 @@ function Case03() {
         Show Product
       </label>{' '}
       <br />
-      {product.length && <Product arr={product} />}
+      {Boolean(product.length) && <Product arr={product} />}
       {/* <Product arr={product} /> */}
     </div>
   );

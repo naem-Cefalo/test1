@@ -13,9 +13,9 @@ export default function Case05() {
       console.log('Fetching user data for userId:', userId);
       setUser({ id: userId, name: `User ${userId}` });
       setLoading(false);
-    }, 1000);
+    }, 2000);
     return () => clearTimeout(timeout);
-  }, [userId, bgColor]); // Only depend on userId
+  }, [userId]); // Only depend on userId
 
   // Function to change background color randomly
   function changeBgColor() {

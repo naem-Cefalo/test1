@@ -9,7 +9,7 @@ function BadFetcher() {
     fetch('https://jsonplaceholder.typicode.com/todos/1')
       .then((res) => res.json())
       .then((json) => setData(json));
-  });
+  }, []);
 
   return (
     <div>
@@ -41,7 +41,7 @@ function GoodFetcher() {
 export default function Case04() {
   return (
     <div>
-      {/* <BadFetcher /> */}
+      <BadFetcher />
       <GoodFetcher />
     </div>
   );
